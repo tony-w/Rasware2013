@@ -45,8 +45,8 @@ typedef enum {
 
 // Convenient definitions of Launchpad pins
 #define PIN_RED   PIN_F1
-#define PIN_GREEN PIN_F2
-#define PIN_BLUE  PIN_F3
+#define PIN_GREEN PIN_F3
+#define PIN_BLUE  PIN_F2
 
 #define PIN_BUTTON_0 PIN_F0
 #define PIN_BUTTON_1 PIN_F4
