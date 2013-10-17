@@ -11,32 +11,30 @@ void initWheels(void) {
 	wheelsInitialized = true;
 }
 
+void setWheelMotors(float leftSpeed, float rightSpeed) {
+	SetMotor(motors[LEFT_WHEEL_MOTOR], leftSpeed);
+	SetMotor(motors[RIGHT_WHEEL_MOTOR], rightSpeed);
+}
+
 void drive(int direction) {
-	float leftSpeed = STOP, rightSpeed = STOP;
 	if(!wheelsInitialized) {
 		initWheels();
 	}
 	switch(direction) {
 		case FORWARD:
-			rightSpeed = SPEED;
-			leftSpeed = SPEED;
+			setWheelMotors(SPEED, SPEED);
 			break;
 		case BACKWARD:
-			rightSpeed = -SPEED;
-			leftSpeed = -SPEED;
+			setWheelMotors(SPEED, -SPEED);
 			break;
 		case LEFT:
-			rightSpeed = TURN_SPEED;
-			leftSpeed = -TURN_SPEED;
+			setWheelMotors(-TURN_SPEED, TURN_SPEED);
 			break;
 		case RIGHT:
-			rightSpeed = -TURN_SPEED;
-			leftSpeed = TURN_SPEED;
+			setWheelMotors(TURN_SPEED, -TURN_SPEED);
 			break;
 		default:
-			rightSpeed = leftSpeed = STOP;
+			setWheelMotors(STOP, STOP);
 			break;
 	}
-	SetMotor(motors[LEFT_WHEEL_MOTOR], leftSpeed);
-	SetMotor(motors[RIGHT_WHEEL_MOTOR], rightSpeed);
 }

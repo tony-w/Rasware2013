@@ -8,10 +8,17 @@ int main(void) {
 	setLed(GREEN);
   drive(LEFT);
 	Wait(2.0);
+	setLed(BLUE);
 	drive(RIGHT);
 	Wait(2.0);
-	drive(NO_WHERE);
+	setLed(GREEN);
+	drive(FORWARD);
+	Wait(2.0);
+	setLed(BLUE);
+	drive(BACKWARD);
+	Wait(2.0);
 	setLed(RED);
+	drive(NO_WHERE);
 	while (1) {
 		// Prevent exit.
 	}

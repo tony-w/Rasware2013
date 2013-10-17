@@ -24,6 +24,11 @@
 void initWheels(void);
 
 /**
+* Helper method to set left and right wheel motor speeds
+*/
+void setWheelMotors(float leftSpeed, float rightSpeed);
+
+/**
 * Drive in one of the directions with speed SPEED:
 *		FORWARD
 *		LEFT
