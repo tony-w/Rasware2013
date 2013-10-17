@@ -3,9 +3,10 @@
 
 // The 'main' function is the entry point of the program
 int main(void) {
-	int currColor = GREEN;
   InitializeMCU();
-  CallEvery(toggleLed, &currColor, 1.0f);
+  setLed(GREEN);
+	Wait(5.0);
+	setLed(OFF);
 	while (1) {
 		// Prevent exit.
 	}

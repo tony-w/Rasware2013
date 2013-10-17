@@ -15,3 +15,28 @@ void toggleLed(int* currColor) {
 			break;
 	}
 }
+
+void setLed(int color) {
+	switch(color) {
+		case RED:
+			SetPin(PIN_RED, 1);
+			SetPin(PIN_GREEN, 0);
+			SetPin(PIN_BLUE, 0);
+			break;
+		case GREEN:
+			SetPin(PIN_RED, 0);
+			SetPin(PIN_GREEN, 1);
+			SetPin(PIN_BLUE, 0);
+			break;
+		case BLUE:
+			SetPin(PIN_RED, 0);
+			SetPin(PIN_GREEN, 0);
+			SetPin(PIN_BLUE, 1);
+			break;
+		case OFF:
+			SetPin(PIN_RED, 0);
+			SetPin(PIN_GREEN, 0);
+			SetPin(PIN_BLUE, 0);
+			break;
+	}
+}
