@@ -33,7 +33,7 @@ void setLed(int color) {
 			SetPin(PIN_GREEN, 0);
 			SetPin(PIN_BLUE, 1);
 			break;
-		case OFF:
+		default:
 			SetPin(PIN_RED, 0);
 			SetPin(PIN_GREEN, 0);
 			SetPin(PIN_BLUE, 0);
