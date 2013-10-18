@@ -1,12 +1,13 @@
 #include <RASLib/inc/common.h>
 #include <RASLib/inc/motor.h>
+#include <RASLib/inc/time.h>
 #include "Wheels.h"
 
 tMotor *motors[12];
 tBoolean wheelsInitialized = false;
 
 void initWheels(void) {
-	motors[LEFT_WHEEL_MOTOR] = InitializeMotor(LEFT_PIN1, LEFT_PIN2, true, false);
+	motors[LEFT_WHEEL_MOTOR] = InitializeMotor(LEFT_PIN1, LEFT_PIN2, true, true);
   motors[RIGHT_WHEEL_MOTOR] = InitializeMotor(RIGHT_PIN1, RIGHT_PIN2, true, true);
 	wheelsInitialized = true;
 }
@@ -37,4 +38,10 @@ void drive(int direction) {
 			setWheelMotors(STOP, STOP);
 			break;
 	}
+}
+
+void timedDrive(int direction, float seconds) {
+	drive(direction);
+	Wait(seconds);
+	drive(NO_WHERE);
 }
