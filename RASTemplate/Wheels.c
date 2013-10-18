@@ -7,7 +7,7 @@ tBoolean wheelsInitialized = false;
 
 void initWheels(void) {
 	motors[LEFT_WHEEL_MOTOR] = InitializeMotor(LEFT_PIN1, LEFT_PIN2, true, false);
-  motors[RIGHT_WHEEL_MOTOR] = InitializeMotor(RIGHT_PIN1, RIGHT_PIN2, true, false);
+  motors[RIGHT_WHEEL_MOTOR] = InitializeMotor(RIGHT_PIN1, RIGHT_PIN2, true, true);
 	wheelsInitialized = true;
 }
 
@@ -25,7 +25,7 @@ void drive(int direction) {
 			setWheelMotors(SPEED, SPEED);
 			break;
 		case BACKWARD:
-			setWheelMotors(SPEED, -SPEED);
+			setWheelMotors(-SPEED, -SPEED);
 			break;
 		case LEFT:
 			setWheelMotors(-TURN_SPEED, TURN_SPEED);

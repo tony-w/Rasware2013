@@ -13,8 +13,8 @@
 
 #define LEFT_PIN1 PIN_B7
 #define LEFT_PIN2 PIN_B6
-#define RIGHT_PIN1 PIN_E5
-#define RIGHT_PIN2 PIN_E4
+#define RIGHT_PIN1 PIN_F3
+#define RIGHT_PIN2 PIN_F2
 #define LEFT_WHEEL_MOTOR 0
 #define RIGHT_WHEEL_MOTOR 1
 
