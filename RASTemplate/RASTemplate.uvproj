@@ -407,6 +407,16 @@
               <FileType>1</FileType>
               <FilePath>.\LED.c</FilePath>
             </File>
+            <File>
+              <FileName>Wheels.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Wheels.c</FilePath>
+            </File>
+            <File>
+              <FileName>LineFollow.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LineFollow.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
