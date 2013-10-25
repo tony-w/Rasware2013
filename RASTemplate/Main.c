@@ -5,9 +5,7 @@
 
 int main(void) {
   InitializeMCU();
-	setLed(OFF);
-	timedDrive(NO_WHERE, 1.0);
-	timedDrive(FORWARD, 5.0);
+	followLine();
 	while (1) {
 		// Prevent exit.
 	}
