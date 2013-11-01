@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\;C:\;..\StellarisWare;C:\StellarisWare;inc</IncludePath>
+              <IncludePath>..\;..\..\;C:\;..\StellarisWare;..\..\StellarisWare;C:\StellarisWare;inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -403,11 +403,6 @@
               <FilePath>.\IRSensorDemo.c</FilePath>
             </File>
             <File>
-              <FileName>LineSensorDemo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LineSensorDemo.c</FilePath>
-            </File>
-            <File>
               <FileName>Main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Main.c</FilePath>
@@ -441,6 +436,16 @@
               <FileName>SonarDemo.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\SonarDemo.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIOLineSensorDemo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\GPIOLineSensorDemo.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2CLineSensorDemo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\I2CLineSensorDemo.c</FilePath>
             </File>
           </Files>
         </Group>
