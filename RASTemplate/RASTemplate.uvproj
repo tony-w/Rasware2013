@@ -417,6 +417,11 @@
               <FileType>1</FileType>
               <FilePath>.\LineFollow.c</FilePath>
             </File>
+            <File>
+              <FileName>WallFollow.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\WallFollow.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
