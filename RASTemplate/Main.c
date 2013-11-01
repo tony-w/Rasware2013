@@ -10,5 +10,6 @@ int main(void) {
 	Wait(1.0);
 	while (1) {
 		followWall();
+		//drive(FORWARD);
 	}
 }

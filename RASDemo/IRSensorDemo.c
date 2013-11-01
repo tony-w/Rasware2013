@@ -17,9 +17,9 @@ void IRSensorDemo(void) {
 	    
   	while(!KeyWasPressed()) {
 	    float ADCValue = ADCRead(adc[0]);
-	    Printf("IR values: %d\t", (int)(1000 * ADCValue));
+	    Printf("IR values: %f\t", ADCValue);
 	    ADCValue = ADCRead(adc[1]);
-	    Printf(" %d\t", (int)(1000 * ADCValue));
+	    Printf(" %f\t", ADCValue);
 	    ADCValue = ADCRead(adc[2]);
 	    Printf(" %d\t", (int)(1000 * ADCValue));
 	    ADCValue = ADCRead(adc[3]);

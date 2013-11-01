@@ -26,7 +26,7 @@ void drive(int direction) {
 			setWheelMotors(SPEED, SPEED);
 			break;
 		case BACKWARD:
-			setWheelMotors(-SPEED, -SPEED);
+			setWheelMotors(1-SPEED, 1-SPEED);
 			break;
 		case LEFT:
 			setWheelMotors(TURN_SPEED, SPEED);

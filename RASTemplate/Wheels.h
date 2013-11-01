@@ -8,8 +8,8 @@
 #define NO_WHERE 4
 
 #define SPEED 0.35
-#define TURN_SPEED 0.6
-#define STOP 0.5
+#define TURN_SPEED 0.48
+#define STOP 0.5f
 
 #define LEFT_PIN1 PIN_C4
 #define LEFT_PIN2 PIN_C5
