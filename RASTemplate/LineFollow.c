@@ -6,9 +6,9 @@ void followLine(void) {
 	if(isSensingLineOnLeft() && isSensingLineOnRight()) {
 		drive(FORWARD);
 	} else if(isSensingLineOnLeft()) {
-		drive(LEFT);
+		drive(LEFT_IN_PLACE);
 	} else if(isSensingLineOnRight()) {
-		drive(RIGHT);
+		drive(RIGHT_IN_PLACE);
 	} else {
 		drive(FORWARD);
 	}

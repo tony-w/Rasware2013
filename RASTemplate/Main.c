@@ -1,4 +1,3 @@
-#include "LED.h"
 #include "LineFollow.h"
 #include "SquareDance.h"
 #include "WallFollow.h"
@@ -9,8 +8,7 @@
 int main(void) {
   InitializeMCU();
 	Wait(1.0);
-	squareDance();
 	while (1) {
-		// Prevent exit
-	}
+		followLine();
+	}	
 }

@@ -10,7 +10,7 @@
 #define RIGHT_IN_PLACE 6
 
 #define SPEED 0.35
-#define TURN_SPEED 0.35
+#define TURN_SPEED 0.48
 #define STOP 0.5f
 
 #define LEFT_PIN1 PIN_C4

@@ -3,7 +3,7 @@
 
 #include <RASLib/inc/adc.h>
 
-#define LINE_SENSOR_THRESHOLD 1.5f
+#define LINE_SENSOR_THRESHOLD 0.6f
 
 tBoolean isSensingLineOnLeft(void);
 tBoolean isSensingLineOnRight(void);

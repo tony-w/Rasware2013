@@ -11,7 +11,7 @@ void initLineSensor(void) {
 
 tBoolean isBlack(char lineSensorBits, int bit) {
 	// Each bit in lineSensorBits represents the value (0 or 1) of the corresponding sensor.
-	return lineSensorBits & (1 << (7 - bit));
+	return lineSensorBits & (1 << bit);
 }
 
 tBoolean isSensingOnLeft(char lineSensorBits) {
