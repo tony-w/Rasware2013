@@ -3,13 +3,13 @@
 #include "Wheels.h"
 
 void followLine(void) {
-	if(isSensingLineOnLeft() && isSensingLineOnRight()) {
-		drive(FORWARD);
+	int lastDirection = FORWARD;
+	if((isSensingLineOnLeft() && isSensingLineOnRight()) || isSensingLineCenter()) {
+		lastDirection = FORWARD;
 	} else if(isSensingLineOnLeft()) {
-		drive(LEFT_IN_PLACE);
+		lastDirection = LEFT_IN_PLACE;
 	} else if(isSensingLineOnRight()) {
-		drive(RIGHT_IN_PLACE);
-	} else {
-		drive(FORWARD);
+		lastDirection = RIGHT_IN_PLACE;
 	}
+	drive(lastDirection);
 }

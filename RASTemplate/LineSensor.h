@@ -7,5 +7,6 @@
 
 tBoolean isSensingLineOnLeft(void);
 tBoolean isSensingLineOnRight(void);
+tBoolean isSensingLineCenter(void);
 
 #endif

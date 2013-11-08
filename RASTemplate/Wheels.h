@@ -9,7 +9,7 @@
 #define LEFT_IN_PLACE 5
 #define RIGHT_IN_PLACE 6
 
-#define SPEED 0.35
+#define SPEED 0.34
 #define TURN_SPEED 0.48
 #define STOP 0.5f
 

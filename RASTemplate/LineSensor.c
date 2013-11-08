@@ -22,6 +22,10 @@ tBoolean isSensingOnRight(char lineSensorBits) {
 	return isBlack(lineSensorBits, 6) || isBlack(lineSensorBits, 7);
 }
 
+tBoolean isSensingCenter(char lineSensorBits) {
+	return isBlack(lineSensorBits, 3) || isBlack(lineSensorBits, 4);
+}
+
 tBoolean isSensingLineOnLeft(void) {
 	char lineSensorBits;
 	if(!lineSensorInitialized) {
@@ -38,4 +42,13 @@ tBoolean isSensingLineOnRight(void) {
 	}
 	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
 	return isSensingOnRight(lineSensorBits);
+}
+
+tBoolean isSensingLineCenter(void) {
+	char lineSensorBits;
+	if(!lineSensorInitialized) {
+		initLineSensor();
+	}
+	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
+	return isSensingCenter(lineSensorBits);
 }
