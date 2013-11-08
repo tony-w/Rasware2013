@@ -6,7 +6,7 @@
 #include <RASLib/inc/motor.h>
 
 int main(void) {
-	float STRAIGHT_TIME = 2.94f;
+	float STRAIGHT_TIME = 3.0f;
 	float TURN_TIME = 0.555f;
 	float WAIT_TIME = 0.5f;
   InitializeMCU();
@@ -19,7 +19,7 @@ int main(void) {
 	Wait(WAIT_TIME);
 	timedDrive(LEFT_IN_PLACE, TURN_TIME + 0.04f);
 	Wait(WAIT_TIME);
-	timedDrive(FORWARD, STRAIGHT_TIME + 0.04f);
+	timedDrive(FORWARD, STRAIGHT_TIME);
 	Wait(WAIT_TIME);
 	timedDrive(LEFT_IN_PLACE, TURN_TIME);
 	Wait(WAIT_TIME);
