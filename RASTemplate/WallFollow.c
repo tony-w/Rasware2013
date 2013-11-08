@@ -1,7 +1,6 @@
 #include "IRSensor.h"
 #include "WallFollow.h"
 #include "Wheels.h"
-#include <RASLib/inc/adc.h>
 
 void followWall(void) {
 	// Turn toward wall if it is too far away;

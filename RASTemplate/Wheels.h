@@ -6,9 +6,11 @@
 #define LEFT 2
 #define RIGHT 3
 #define NO_WHERE 4
+#define LEFT_IN_PLACE 5
+#define RIGHT_IN_PLACE 6
 
 #define SPEED 0.35
-#define TURN_SPEED 0.48
+#define TURN_SPEED 0.35
 #define STOP 0.5f
 
 #define LEFT_PIN1 PIN_C4
