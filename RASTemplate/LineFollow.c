@@ -7,7 +7,7 @@ tBoolean lineSensorInitialized = false;
 
 void initLineSensor(void) {
 	tI2C *bus = InitializeI2C(LINE_SENSOR_SDA_PIN, LINE_SENSOR_SCL_PIN);
-  ls = InitializeLineSensor(bus, 0);
+  ls = InitializeI2CLineSensor(bus, 0);
 	lineSensorInitialized = true;
 }
 
