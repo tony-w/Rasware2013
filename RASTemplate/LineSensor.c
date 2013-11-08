@@ -9,35 +9,33 @@ void initLineSensor(void) {
 	lineSensorInitialized = true;
 }
 
-tBoolean isBlack(float lineSensorValue) {
-	// Values range from 0 to Vcc (3.3?), where 0 is white and Vcc is black.
-	return lineSensorValue > LINE_SENSOR_THRESHOLD;
+tBoolean isBlack(char lineSensorBits, int bit) {
+	// Each bit in lineSensorBits represents the value (0 or 1) of the corresponding sensor.
+	return lineSensorBits & (1 << (7 - bit));
 }
 
-tBoolean isSensingOnLeft(float line[]) {
-	//return isBlack(line[0]) || isBlack(line[1]) || isBlack(line[2]);
-	return isBlack(line[0]) || isBlack(line[1]);
+tBoolean isSensingOnLeft(char lineSensorBits) {
+	return isBlack(lineSensorBits, 0) || isBlack(lineSensorBits, 1);
 }
 
-tBoolean isSensingOnRight(float line[]) {
-	//return isBlack(line[5]) || isBlack(line[6]) || isBlack(line[7]);
-	return isBlack(line[6]) || isBlack(line[7]);
+tBoolean isSensingOnRight(char lineSensorBits) {
+	return isBlack(lineSensorBits, 6) || isBlack(lineSensorBits, 7);
 }
 
 tBoolean isSensingLineOnLeft(void) {
-	float line[8];
+	char lineSensorBits;
 	if(!lineSensorInitialized) {
 		initLineSensor();
 	}
-	LineSensorReadArray(ls, line);
-	return isSensingOnLeft(line);
+	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
+	return isSensingOnLeft(lineSensorBits);
 }
 
 tBoolean isSensingLineOnRight(void) {
-	float line[8];
+	char lineSensorBits;
 	if(!lineSensorInitialized) {
 		initLineSensor();
 	}
-	LineSensorReadArray(ls, line);
-	return isSensingOnRight(line);
+	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
+	return isSensingOnRight(lineSensorBits);
 }
