@@ -5,8 +5,7 @@ tLineSensor *ls;
 tBoolean lineSensorInitialized = false;
 
 void initLineSensor(void) {
-	tI2C *bus = InitializeI2C(LINE_SENSOR_SDA_PIN, LINE_SENSOR_SCL_PIN);
-  ls = InitializeI2CLineSensor(bus, 0);
+  ls = InitializeGPIOLineSensor(PIN_B5, PIN_D0, PIN_D1, PIN_D2, PIN_D3, PIN_E0, PIN_C6, PIN_C7);
 	lineSensorInitialized = true;
 }
 
