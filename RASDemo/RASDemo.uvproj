@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\;C:\;..\StellarisWare;C:\StellarisWare;inc</IncludePath>
+              <IncludePath>..\;..\..\;C:\;..\StellarisWare;..\..\StellarisWare;C:\StellarisWare;inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,9 +393,34 @@
           <GroupName>Source</GroupName>
           <Files>
             <File>
+              <FileName>EncoderDemo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\EncoderDemo.c</FilePath>
+            </File>
+            <File>
+              <FileName>IRSensorDemo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\IRSensorDemo.c</FilePath>
+            </File>
+            <File>
               <FileName>Main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Main.c</FilePath>
+            </File>
+            <File>
+              <FileName>MotorDemo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MotorDemo.c</FilePath>
+            </File>
+            <File>
+              <FileName>ServoDemo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ServoDemo.c</FilePath>
+            </File>
+            <File>
+              <FileName>UARTDemo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UARTDemo.c</FilePath>
             </File>
             <File>
               <FileName>Startup.s</FileName>
@@ -403,34 +428,24 @@
               <FilePath>.\Startup.s</FilePath>
             </File>
             <File>
-              <FileName>Wheels.c</FileName>
+              <FileName>GPIODemo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Wheels.c</FilePath>
+              <FilePath>.\GPIODemo.c</FilePath>
             </File>
             <File>
-              <FileName>LineFollow.c</FileName>
+              <FileName>SonarDemo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\LineFollow.c</FilePath>
+              <FilePath>.\SonarDemo.c</FilePath>
             </File>
             <File>
-              <FileName>WallFollow.c</FileName>
+              <FileName>GPIOLineSensorDemo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\WallFollow.c</FilePath>
+              <FilePath>.\GPIOLineSensorDemo.c</FilePath>
             </File>
             <File>
-              <FileName>IRSensor.c</FileName>
+              <FileName>I2CLineSensorDemo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\IRSensor.c</FilePath>
-            </File>
-            <File>
-              <FileName>LineSensor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LineSensor.c</FilePath>
-            </File>
-            <File>
-              <FileName>SquareDance.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\SquareDance.c</FilePath>
+              <FilePath>.\I2CLineSensorDemo.c</FilePath>
             </File>
           </Files>
         </Group>
