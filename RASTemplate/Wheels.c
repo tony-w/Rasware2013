@@ -38,7 +38,7 @@ void drive(int direction) {
 			setWheelMotors(1-SPEED+TURBO, SPEED-TURBO);
 			break;
 		case RIGHT_IN_PLACE:
-		setWheelMotors(SPEED-TURBO, 1-SPEED+TURBO);
+			setWheelMotors(SPEED-TURBO, 1-SPEED+TURBO);
 			break;
 		default:
 			setWheelMotors(STOP, STOP);
