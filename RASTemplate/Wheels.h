@@ -3,14 +3,15 @@
 
 #define FORWARD 0
 #define BACKWARD 1
-#define LEFT 2
-#define RIGHT 3
+#define BANKED_LEFT 2
+#define BANKED_RIGHT 3
 #define NO_WHERE 4
 #define LEFT_IN_PLACE 5
 #define RIGHT_IN_PLACE 6
 
-#define SPEED 0.34
-#define TURN_SPEED 0.48
+#define SPEED 0.34f
+#define TURBO 0.1f
+#define TURN_SPEED 0.48f
 #define STOP 0.5f
 
 #define LEFT_PIN1 PIN_C4

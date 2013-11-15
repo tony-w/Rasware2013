@@ -28,17 +28,17 @@ void drive(int direction) {
 		case BACKWARD:
 			setWheelMotors(1-SPEED, 1-SPEED);
 			break;
-		case LEFT:
+		case BANKED_LEFT:
 			setWheelMotors(TURN_SPEED, SPEED);
 			break;
-		case RIGHT:
+		case BANKED_RIGHT:
 			setWheelMotors(SPEED, TURN_SPEED);
 			break;
 		case LEFT_IN_PLACE:
-			setWheelMotors(1-SPEED, SPEED);
+			setWheelMotors(1-SPEED+TURBO, SPEED-TURBO);
 			break;
 		case RIGHT_IN_PLACE:
-		setWheelMotors(SPEED, 1-SPEED);
+		setWheelMotors(SPEED-TURBO, 1-SPEED+TURBO);
 			break;
 		default:
 			setWheelMotors(STOP, STOP);

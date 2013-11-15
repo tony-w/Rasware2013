@@ -7,9 +7,9 @@ void followWall(void) {
 	// Turn away from the wall if it is too close;
 	// Otherwise continue straight.
 	if(IRLessThanThreshold(ADC_LEFT_THRESHOLD)) {
-		drive(LEFT);
+		drive(BANKED_LEFT);
 	} else if (IRGreaterThanThreshold(ADC_RIGHT_THRESHOLD)) {
-		drive(RIGHT);
+		drive(BANKED_RIGHT);
 	} else {
 		drive(FORWARD);
 	}
