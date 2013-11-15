@@ -5,7 +5,9 @@
 
 #define LINE_SENSOR_THRESHOLD 0.6f
 
+tBoolean isSensingLineOnFarLeft(void);
 tBoolean isSensingLineOnLeft(void);
+tBoolean isSensingLineOnFarRight(void);
 tBoolean isSensingLineOnRight(void);
 tBoolean isSensingLineCenter(void);
 
