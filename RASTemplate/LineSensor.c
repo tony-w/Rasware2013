@@ -22,19 +22,19 @@ char getLineSensorBits(void) {
 }
 
 tBoolean isSensingLineOnFarLeft(char lineSensorBits) {
-	return isBlack(lineSensorBits, 0);
-}
-
-tBoolean isSensingLineOnLeft(char lineSensorBits) {
 	return isBlack(lineSensorBits, 0) || isBlack(lineSensorBits, 1);
 }
 
+tBoolean isSensingLineOnLeft(char lineSensorBits) {
+	return isBlack(lineSensorBits, 0) || isBlack(lineSensorBits, 1) || isBlack(lineSensorBits, 2);
+}
+
 tBoolean isSensingLineOnFarRight(char lineSensorBits) {
-	return isBlack(lineSensorBits, 7);
+	return isBlack(lineSensorBits, 6) || isBlack(lineSensorBits, 7);
 }
 
 tBoolean isSensingLineOnRight(char lineSensorBits) {
-	return isBlack(lineSensorBits, 6) || isBlack(lineSensorBits, 7);
+	return isBlack(lineSensorBits, 5) || isBlack(lineSensorBits, 6) || isBlack(lineSensorBits, 7);
 }
 
 tBoolean isSensingLineCenter(char lineSensorBits) {
