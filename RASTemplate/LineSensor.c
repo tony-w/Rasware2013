@@ -20,6 +20,7 @@ void setLineSensorArray(void) {
 		initLineSensor();
 	}
 	LineSensorReadArray(ls, line);
+	line[3] *= 2.6f;
 }
 
 tBoolean isSensingLineOnFarLeft(void) {

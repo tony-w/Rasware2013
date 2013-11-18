@@ -32,4 +32,6 @@ void drive(int direction);
 */
 void timedDrive(int direction, float seconds);
 
+void setWheelMotors(float leftSpeed, float rightSpeed);
+
 #endif

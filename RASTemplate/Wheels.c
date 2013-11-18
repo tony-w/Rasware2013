@@ -13,14 +13,14 @@ void initWheels(void) {
 }
 
 void setWheelMotors(float leftSpeed, float rightSpeed) {
+	if(!wheelsInitialized) {
+		initWheels();
+	}
 	SetMotor(motors[LEFT_WHEEL_MOTOR], leftSpeed);
 	SetMotor(motors[RIGHT_WHEEL_MOTOR], rightSpeed);
 }
 
 void drive(int direction) {
-	if(!wheelsInitialized) {
-		initWheels();
-	} 
 	switch(direction) {
 		case FORWARD:
 			setWheelMotors(SPEED-TURBO, SPEED-TURBO);

@@ -7,7 +7,8 @@
 
 int main(void) {
   InitializeMCU();
-	timedDrive(FORWARD, 0.2f);
+	setWheelMotors(SPEED, SPEED);
+	Wait(0.2);
 	while (1) {
 		followLine();
 	}
