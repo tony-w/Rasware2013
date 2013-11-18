@@ -6,7 +6,8 @@
 int direction = FORWARD;
 void followLine(void) {
 	setLineSensorArray();
-	if((isSensingLineOnLeft() && isSensingLineOnRight()) || isSensingLineCenter()) {
+	if((isSensingLineOnLeft() && isSensingLineOnRight())
+			|| isSensingLineCenter()) {
 		direction = FORWARD;
 	} else if (isSensingLineOnFarLeft()) {
 			direction = LEFT_IN_PLACE;
@@ -17,5 +18,6 @@ void followLine(void) {
 	} else if(isSensingLineOnRight()) {
 		direction = BANKED_RIGHT;
 	}
+	// This will remember the last direction if not changed.
 	drive(direction);
 }

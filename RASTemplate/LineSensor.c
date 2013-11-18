@@ -20,6 +20,7 @@ void setLineSensorArray(void) {
 		initLineSensor();
 	}
 	LineSensorReadArray(ls, line);
+	// Compensate for bad sensor.
 	line[3] *= 2.6f;
 }
 

@@ -32,6 +32,11 @@ void drive(int direction);
 */
 void timedDrive(int direction, float seconds);
 
+/**
+* Set the left and right wheel motors. The speed parameters should
+* be from 0 to 1, where 0 is full speed forward, 1 is full speed
+* backward, and 0.5 is stopped.
+*/
 void setWheelMotors(float leftSpeed, float rightSpeed);
 
 #endif

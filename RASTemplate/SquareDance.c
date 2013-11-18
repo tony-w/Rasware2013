@@ -9,6 +9,7 @@ void squareDance(void) {
 	Wait(WAIT_TIME);
 	timedDrive(FORWARD, STRAIGHT_TIME);
 	Wait(WAIT_TIME);
+	// Compensate for rough patch on ground.
 	timedDrive(LEFT_IN_PLACE, TURN_TIME + 0.04f);
 	Wait(WAIT_TIME);
 	timedDrive(FORWARD, STRAIGHT_TIME);
