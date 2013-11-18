@@ -5,18 +5,16 @@
 
 int direction = FORWARD;
 void followLine(void) {
-	char lineSensorBits = getLineSensorBits();
-	if((isSensingLineOnLeft(lineSensorBits)
-		&& isSensingLineOnRight(lineSensorBits))
-		|| isSensingLineCenter(lineSensorBits)) {
+	setLineSensorArray();
+	if((isSensingLineOnLeft() && isSensingLineOnRight()) || isSensingLineCenter()) {
 		direction = FORWARD;
-	} else if (isSensingLineOnFarLeft(lineSensorBits)) {
+	} else if (isSensingLineOnFarLeft()) {
 			direction = LEFT_IN_PLACE;
-	} else if(isSensingLineOnLeft(lineSensorBits)) {
+	} else if(isSensingLineOnLeft()) {
 		direction = BANKED_LEFT;
-	} else if(isSensingLineOnFarRight(lineSensorBits)) {
+	} else if(isSensingLineOnFarRight()) {
 		direction = RIGHT_IN_PLACE;
-	} else if(isSensingLineOnRight(lineSensorBits)) {
+	} else if(isSensingLineOnRight()) {
 		direction = BANKED_RIGHT;
 	}
 	drive(direction);
