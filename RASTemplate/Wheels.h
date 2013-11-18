@@ -22,11 +22,7 @@
 #define RIGHT_WHEEL_MOTOR 1
 
 /**
-* Drive in one of the directions with speed SPEED:
-*		FORWARD
-*		LEFT
-*		RIGHT
-*		BACKWARD
+* Drive the given direction based on the constants defined above.
 */
 void drive(int direction);
 
