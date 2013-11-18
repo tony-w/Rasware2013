@@ -8,7 +8,8 @@
 int main(void) {
   InitializeMCU();
 	Wait(1.0);
+	timedDrive(FORWARD, 0.2f);
 	while (1) {
 		followLine();
-	}	
+	}
 }

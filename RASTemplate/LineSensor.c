@@ -14,67 +14,29 @@ tBoolean isBlack(char lineSensorBits, int bit) {
 	return lineSensorBits & (1 << bit);
 }
 
-tBoolean isSensingOnFarLeft(char lineSensorBits) {
+char getLineSensorBits(void) {
+	if(!lineSensorInitialized) {
+		initLineSensor();
+	}
+	return LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
+}
+
+tBoolean isSensingLineOnFarLeft(char lineSensorBits) {
 	return isBlack(lineSensorBits, 0);
 }
 
-tBoolean isSensingOnLeft(char lineSensorBits) {
+tBoolean isSensingLineOnLeft(char lineSensorBits) {
 	return isBlack(lineSensorBits, 0) || isBlack(lineSensorBits, 1);
 }
 
-tBoolean isSensingOnFarRight(char lineSensorBits) {
+tBoolean isSensingLineOnFarRight(char lineSensorBits) {
 	return isBlack(lineSensorBits, 7);
 }
 
-tBoolean isSensingOnRight(char lineSensorBits) {
+tBoolean isSensingLineOnRight(char lineSensorBits) {
 	return isBlack(lineSensorBits, 6) || isBlack(lineSensorBits, 7);
 }
 
-tBoolean isSensingCenter(char lineSensorBits) {
+tBoolean isSensingLineCenter(char lineSensorBits) {
 	return isBlack(lineSensorBits, 3) || isBlack(lineSensorBits, 4);
-}
-
-tBoolean isSensingLineOnFarLeft(void) {
-	char lineSensorBits;
-	if(!lineSensorInitialized) {
-		initLineSensor();
-	}
-	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
-	return isSensingOnFarLeft(lineSensorBits);
-}
-
-tBoolean isSensingLineOnLeft(void) {
-	char lineSensorBits;
-	if(!lineSensorInitialized) {
-		initLineSensor();
-	}
-	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
-	return isSensingOnLeft(lineSensorBits);
-}
-
-tBoolean isSensingLineOnFarRight(void) {
-	char lineSensorBits;
-	if(!lineSensorInitialized) {
-		initLineSensor();
-	}
-	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
-	return isSensingOnFarRight(lineSensorBits);
-}
-
-tBoolean isSensingLineOnRight(void) {
-	char lineSensorBits;
-	if(!lineSensorInitialized) {
-		initLineSensor();
-	}
-	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
-	return isSensingOnRight(lineSensorBits);
-}
-
-tBoolean isSensingLineCenter(void) {
-	char lineSensorBits;
-	if(!lineSensorInitialized) {
-		initLineSensor();
-	}
-	lineSensorBits = LineSensorRead(ls, LINE_SENSOR_THRESHOLD);
-	return isSensingCenter(lineSensorBits);
 }

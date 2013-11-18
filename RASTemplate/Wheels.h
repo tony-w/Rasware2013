@@ -9,9 +9,9 @@
 #define LEFT_IN_PLACE 5
 #define RIGHT_IN_PLACE 6
 
-#define SPEED 0.15f
-#define TURBO 0.05f
-#define TURN_SPEED 0.44f
+#define SPEED 0.25f
+#define TURN_IN_PLACE_TURBO 0.10f
+#define BANKED_TURN_COMPENSATION 0.20f
 #define STOP 0.5f
 
 #define LEFT_PIN1 PIN_C4
@@ -20,16 +20,6 @@
 #define RIGHT_PIN2 PIN_B7
 #define LEFT_WHEEL_MOTOR 0
 #define RIGHT_WHEEL_MOTOR 1
-
-/**
-* Initialize wheel motors
-*/
-void initWheels(void);
-
-/**
-* Helper method to set left and right wheel motor speeds
-*/
-void setWheelMotors(float leftSpeed, float rightSpeed);
 
 /**
 * Drive in one of the directions with speed SPEED:

@@ -15,16 +15,18 @@ void gpioLineSensorDemo(void) {
   
     while(!KeyWasPressed()) {
         int i;
-        float line[8];
+        //float line[8];
     
-        LineSensorReadArray(gls, line);
-        Printf("Line Sensor: [");
+        char lineSensorBits = LineSensorRead(gls, 0.8f);
+			
+        //Printf("Line Sensor: [%d]\r", lineSensorBits);
     
+			  Printf("\r");
         for (i=0; i < 8; i++) {
-            Printf("%01.4f ", line[i]);
+            Printf("%d ", lineSensorBits & (1 << i));
         }
     
-        Printf("\b]\r");
+        Printf("                                     ");
       }
   
       Printf("\n"); 
