@@ -9,7 +9,7 @@
 #define LEFT_IN_PLACE 5
 #define RIGHT_IN_PLACE 6
 
-#define SPEED 0.35f
+#define SPEED 0.37f
 #define TURBO 0.10f
 #define TURN_IN_PLACE_TURBO 0.28f
 #define BANKED_TURN_COMPENSATION 0.25f
